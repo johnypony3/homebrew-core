@@ -17,9 +17,9 @@ class Packer < Formula
 
   devel do
     url "https://github.com/mitchellh/packer.git",
-        :tag => "v1.0.0-rc3",
-        :revision => "974a2fe96fcc3a55787d188aff903b4fd86ab666"
-    version "1.0.0-rc3"
+        :tag => "v1.0.0",
+        :revision => "e3d65a193e96c7b228589fc9699e39998ec12e4e"
+    version "1.0.0"
   end
 
   depends_on :hg => :build

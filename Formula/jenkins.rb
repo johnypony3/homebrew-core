@@ -26,7 +26,7 @@ class Jenkins < Formula
   end
 
   def caveats; <<-EOS.undent
-    Note: When using launchctl the port will be 8080.
+    Note: When using launchctl the port will be 9090.
   EOS
   end
 
@@ -46,7 +46,7 @@ class Jenkins < Formula
           <string>-jar</string>
           <string>#{opt_libexec}/jenkins.war</string>
           <string>--httpListenAddress=127.0.0.1</string>
-          <string>--httpPort=8080</string>
+          <string>--httpPort=9090</string>
         </array>
         <key>RunAtLoad</key>
         <true/>
@@ -64,7 +64,7 @@ class Jenkins < Formula
     sleep 60
 
     begin
-      assert_match /Welcome to Jenkins!|Unlock Jenkins|Authentication required/, shell_output("curl localhost:8080/")
+      assert_match /Welcome to Jenkins!|Unlock Jenkins|Authentication required/, shell_output("curl localhost:9090/")
     ensure
       Process.kill("SIGINT", pid)
       Process.wait(pid)

@@ -50,6 +50,11 @@ class Jenkins < Formula
         </array>
         <key>RunAtLoad</key>
         <true/>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        </dict>
       </dict>
     </plist>
   EOS
